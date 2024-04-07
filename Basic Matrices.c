@@ -1,22 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void generarMatriz(int [][10],int);//Para prototipo y función solo es mandatorio la columna
+void generarMatriz(int [][10],int);
 void mostrarMatriz(int [][10],int);
 void sumaElementos (int [][10],int, int);
-//void (int [][10],int,int);
-//void (int [][10],int,int);
-//void (int [][10],int,int);
-//void (int [][10],int,int);
 
 
-int main ()//INICIO DE PROGRAMA - INICIO DE PROGRAMA - INICIO DE PROGRAMA - INICIO DE PROGRAMA -
-{
+int main ()
 
-int MatrizA [10][10];//Se debe definir las dos dimensiones cuando se lo declara
+int MatrizA [10][10];
 int dim, filasuma;
 
-printf("Ingrese dimension: ");//Solo trabajaremos con matrices cuadradas
+printf("Ingrese dimension: ");
 scanf("%d",&dim);
 
 generarMatriz(MatrizA,dim);
@@ -25,21 +20,19 @@ mostrarMatriz(MatrizA,dim);
 printf("\nLos elementos de qué fila se van a sumar?: ");
 scanf("%d", &filasuma);
 sumaElementos(MatrizA,dim,filasuma);
-//mostrarMatriz(MatrizA,filas,cols);
 
-}//FIN DE PROGRAMA - FIN DE PROGRAMA - FIN DE PROGRAMA - FIN DE PROGRAMA - FIN DE PROGRAMA - 
-
+}
 
 void generarMatriz (int Matriz [][10],int dim)
 {
 int i,j, num;
 
-for (i=0; i<dim ;i++)//Tope dado por cantidad de filas. Cada DIM elementos, cambia la fila
+for (i=0; i<dim ;i++)
 {
-    for (j=0; j<dim; j++)//Tope dado por cantidad de columnas. Fila 0 y camino por las columnas.
+    for (j=0; j<dim; j++)
     {
         printf ("Valor para Fila %d Col %d: ",i,j);
-        scanf("%d", &Matriz[i][j]);//SE PARA EN LA PRIMERA FILA, RECORRE LAS COLUMNAS
+        scanf("%d", &Matriz[i][j]);
     } 
 }
 }
@@ -48,13 +41,12 @@ void mostrarMatriz (int Matriz [][10], int dim)
 {
 int i,j;
 
-for (i=0; i<dim ;i++)//Tope dado por cantidad de filas
+for (i=0; i<dim ;i++)
 {
-    printf("\n");//Linea nueva entre fila y fila
-    for (j=0; j<dim; j++)//Tope dado por cantidad de columnas
+    printf("\n");
+    for (j=0; j<dim; j++)
     {
-        printf("%d\t",Matriz[i][j]);//SE PARA EN LA PRIMERA FILA, RECORRE LAS COLUMNAS
-
+        printf("%d\t",Matriz[i][j]);
     }
 }
 
